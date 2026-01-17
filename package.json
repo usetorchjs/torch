@@ -1,5 +1,5 @@
 {
-  "name": "torch",
+  "name": "@usetorch/torch",
   "type": "module",
   "version": "0.0.2",
   "description": "a different framework.",
