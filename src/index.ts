@@ -1,3 +1,3 @@
 export * from "./deco"
-export type { TorchPage } from "./classes/TorchPage"
+export type * from "./classes/index"
 export * from "./hono-adapter/index"

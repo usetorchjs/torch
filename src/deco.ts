@@ -1,7 +1,19 @@
+import type { Layout } from "./classes";
+/**
+ * Decorator to set the Layout of a Page
+ * @param layout layout to use
+ */
+function useLayout(layout: Layout) {
+    return (construct: Function) => {
+        construct.prototype.layout = layout
+    }
+}
+
+
 const routeRegistry = new Map<Function, string>();
 
 /**
- * Decorator to set the route path of a TorchPage component
+ * Decorator to set the route path of a Page component
  * @param routeName - name of the route (e.g. "/about", "/users/:id")
  */
 function Route(routeName: string) {
@@ -58,5 +70,6 @@ export {
   Route,
   torchRoutes,
   TorchAllRoutes,
+  useLayout
 };
 
