@@ -5,7 +5,7 @@ import type { Layout } from "./classes";
  */
 function useLayout(layout: Layout) {
     return (construct: Function) => {
-        construct.prototype.layout = layout
+        construct.layout = layout
     }
 }
 
@@ -35,6 +35,7 @@ class TorchAllRoutes {
     this.routesArray = Array.from(routeRegistry.entries()).map(([component, path]) => ({
       path,
       component,
+      layout: component.layout
     }));
     return this;
   }
