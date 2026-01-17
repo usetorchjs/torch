@@ -1,7 +1,7 @@
 {
   "name": "@usetorch/torch",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a different framework.",
   "author": "loudy",
   "license": "MIT",
