@@ -1,0 +1,40 @@
+{
+  "name": "torch",
+  "type": "module",
+  "version": "0.0.2",
+  "description": "a different framework.",
+  "author": "loudy",
+  "license": "MIT",
+  "homepage": "https://github.com/usetorchjs/torch",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usetorchjs/torch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/usetorchjs/torchissues"
+  },
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "bumpp": "^10.3.2",
+    "tsdown": "^0.18.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
+  }
+}
